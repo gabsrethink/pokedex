@@ -1,7 +1,5 @@
-import { View, Text } from "react-native";
 import LottieView from "lottie-react-native";
-import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
-
+import Animated, { FadeOut } from "react-native-reanimated";
 import pokeballJson from "../assets/pokeball.json";
 import { useRef } from "react";
 

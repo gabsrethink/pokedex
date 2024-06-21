@@ -1,5 +1,5 @@
 import "@/styles/global.css";
-import { Slot } from "expo-router";
+import { Slot, Stack } from "expo-router";
 import {
   Roboto_400Regular,
   Roboto_500Medium,
