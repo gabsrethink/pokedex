@@ -5,7 +5,7 @@ import {
   ActivityIndicator,
   ImageBackground,
 } from "react-native";
-import { colors } from "@/styles/colors";
+import { TYPE_COLORS } from "@/styles/colors";
 import { Link, LinkProps } from "expo-router";
 
 type Props = TouchableOpacityProps & {
@@ -18,7 +18,7 @@ type Props = TouchableOpacityProps & {
 export function Button({
   title,
   isLoading = false,
-  color = colors.normalType,
+  color = TYPE_COLORS.normal,
   link,
   ...rest
 }: Props) {

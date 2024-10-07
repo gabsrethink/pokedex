@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { Button } from "@/components/button";
-import { colors } from "@/styles/colors";
+import { TYPE_COLORS } from "@/styles/colors";
 import Animated, { FadeIn } from "react-native-reanimated";
 import { View, Image, Text } from "react-native";
 
@@ -17,12 +17,16 @@ export default function HomeScreen() {
           {"What Pokémon \nare you looking for?"}
         </Text>
         <View className="flex-row flex-wrap gap-4 justify-center">
-          <Button link="/pokedex" title={"Pokédex"} color={colors.grassType} />
-          <Button title={"Moves"} color={colors.fireType} />
-          <Button title={"Abilities"} color={colors.waterType} />
-          <Button title={"Items"} color={colors.electricType} />
-          <Button title={"Locations"} color={colors.poisonType} />
-          <Button title={"Type Charts"} color={colors.groundType} />
+          <Button link="/pokedex" title={"Pokédex"} color={TYPE_COLORS.grass} />
+          <Button
+            link="/favoritePokemons"
+            title={"Favorites"}
+            color={TYPE_COLORS.fire}
+          />
+          <Button title={"Abilities"} color={TYPE_COLORS.water} />
+          <Button title={"Items"} color={TYPE_COLORS.electric} />
+          <Button title={"Locations"} color={TYPE_COLORS.poison} />
+          <Button title={"Type Charts"} color={TYPE_COLORS.ground} />
         </View>
       </View>
     </Animated.View>

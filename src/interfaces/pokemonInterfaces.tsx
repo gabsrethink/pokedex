@@ -15,6 +15,7 @@ export interface SinglePokemon {
   name: string;
   picture: string;
   color?: string;
+  types: string[];
 }
 
 export interface PokemonFull {

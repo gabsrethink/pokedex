@@ -8,6 +8,11 @@ import {
 } from "@expo-google-fonts/roboto";
 import { useEffect, useState } from "react";
 import AnimatedSplashScreen from "./splash";
+import { configureStore } from "@reduxjs/toolkit";
+import { reducer } from "@/store";
+import { Provider } from "react-redux";
+
+export const store = configureStore({ reducer: reducer });
 
 export default function Layout() {
   const [appReady, setAppReady] = useState(false);
@@ -36,5 +41,9 @@ export default function Layout() {
     );
   }
 
-  return <Slot />;
+  return (
+    <Provider store={store}>
+      <Slot />
+    </Provider>
+  );
 }
